@@ -1,0 +1,158 @@
+import { useState } from "react";
+import service from "../Service";
+
+const Visit = () => {
+  const initialstate = {
+    name: "",
+    email: "",
+    phone: "",
+    distance: 1000,
+    freight: "",
+    load: "",
+  };
+
+  const [formData, setFormData] = useState(initialstate);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    // auto-convert numbers
+    if (name === "phone" || name === "distance" || name === "load") {
+      setFormData({ ...formData, [name]: Number(value) });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await service.register(formData);
+      console.log("✅ Success:", response);
+      setFormData(initialstate); // reset form after success
+    } catch (error) {
+      console.error("❌ Error while sending details:", error.response?.data || error.message);
+    }
+  };
+
+  return (
+    <div
+      className="relative py-10 w-full bg-center bg-cover"
+      style={{
+        backgroundImage:
+          'url("/programming-background-with-person-working-with-codes-computer.jpg")',
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/70"></div>
+
+      {/* Content */}
+      <div className="relative flex flex-col justify-center h-full px-6 md:px-20 text-white space-y-6 text-left">
+        <div className="bg-orange-600 text-white p-6 sm:p-8 rounded-2xl w-full sm:w-[450px] shadow-lg mx-auto">
+          <h2 className="text-white text-2xl font-bold mb-6 text-center">
+            Request a Quote
+          </h2>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Name */}
+            <div>
+              <label className="text-white block mb-1">Name</label>
+              <input
+                value={formData.name}
+                required
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                className="w-full p-3 rounded-lg outline-gray-600 bg-white text-black"
+                onChange={handleChange}
+              />
+            </div>
+
+            {/* Email & Phone */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="text-white block mb-1">Email</label>
+                <input
+                  value={formData.email}
+                  required
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  className="w-full p-3 rounded-lg outline-gray-600 bg-white text-black"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label className="text-white block mb-1">Phone</label>
+                <input
+                  value={formData.phone}
+                  required
+                  type="number"
+                  name="phone"
+                  placeholder="Phone No"
+                  className="w-full p-3 rounded-lg outline-gray-600 bg-white text-black"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+
+            {/* Distance */}
+            <div>
+              <label className="text-white block mb-1">
+                Distance (Miles): {formData.distance}
+              </label>
+              <input
+                type="range"
+                name="distance"
+                min="100"
+                max="7000"
+                value={formData.distance}
+                onChange={handleChange}
+                className="w-full accent-black cursor-pointer"
+              />
+            </div>
+
+            {/* Freight & Load */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <select
+                value={formData.freight}
+                name="freight"
+                required
+                className="w-full p-3 rounded-lg outline-gray-600 bg-white text-gray-700 cursor-pointer"
+                onChange={handleChange}
+              >
+                <option value="">Select Freight</option>
+                <option value="Air">Air</option>
+                <option value="Sea">Sea</option>
+                <option value="Road">Road</option>
+              </select>
+
+              <select
+                value={formData.load}
+                name="load"
+                required
+                className="w-full p-3 rounded-lg outline-gray-600 bg-white text-gray-700 cursor-pointer"
+                onChange={handleChange}
+              >
+                <option value="">Select Load</option>
+                <option value="1">Light</option>
+                <option value="2">Medium</option>
+                <option value="3">Heavy</option>
+              </select>
+            </div>
+
+            {/* Submit */}
+            <button
+              type="submit"
+              className="bg-white font-semibold border-2 text-orange-600 px-6 py-3 rounded-lg w-full hover:bg-orange-600 hover:text-white transition-all duration-300"
+            >
+              Submit Now →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Visit;
