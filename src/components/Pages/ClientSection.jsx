@@ -5,7 +5,7 @@ const ClientSection = () => {
   const Card = [
     {
       id: 1,
-      img: "/download (6).jpg",
+      img: "/client (1).jpg",
       name: "Kimberly Hansen",
       position: "Manager",
       feedback:
@@ -13,7 +13,7 @@ const ClientSection = () => {
     },
     {
       id: 2,
-      img: "/download (6).jpg",
+      img: "/client (2).jpg",
       name: "James Parker",
       position: "CEO",
       feedback:
