@@ -8,7 +8,7 @@ const HeroSection = () => {
       className="relative min-w-full h-screen bg-center bg-cover"
       style={{
         backgroundImage:
-          'url("/programming-background-with-person-working-with-codes-computer.jpg")',
+          'url("/wallpaper.jpg")',
       }}
     >
       <div className="absolute inset-0 bg-black/70"></div>

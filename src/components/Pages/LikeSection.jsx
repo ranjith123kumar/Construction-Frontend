@@ -4,7 +4,7 @@ const LikeSection = () => {
   return (
    <div className='flex flex-col md:flex-row justify-between bg-indigo-950 items-center mt-5 '>
                 <img
-                    src="/download (6).jpg"
+                    src="/wallpaper2.jpg"
                     alt="transport service"
                     className='w-full md:w-1/4 h-56 object-cover'
                 />

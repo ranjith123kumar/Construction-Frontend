@@ -5,7 +5,7 @@ const LogisticSection
     const Card = [
         {
             id: 1,
-            img: "/download (6).jpg",
+            img: "/logistic-air.jpg",
             service: "Air Freight Service",
             text: "Long established fact that reader will be distracted by the",
         },
@@ -18,7 +18,7 @@ const LogisticSection
         {
             id: 3,
             img: "/download (5).jpg",
-            service: "Sea Freight Service",
+            service: "Ship Freight Service",
             text: "Worldwide shipping services with efficiency.",
         }
     ];
