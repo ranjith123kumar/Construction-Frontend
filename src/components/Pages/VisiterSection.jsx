@@ -57,7 +57,7 @@ const VisiterSection = () => {
       className="relative py-16 w-full bg-center bg-cover"
       style={{
         backgroundImage:
-          'url("/programming-background-with-person-working-with-codes-computer.jpg")',
+          'url("/wallpaper.jpg")',
       }}
     >
       {/* Overlay */}
