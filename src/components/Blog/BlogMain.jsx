@@ -9,7 +9,7 @@ const BlogMain = () => {
   const Card = [
     {
       id: 1,
-      img: "/download (6).jpg",
+      img: "/BlogSection (1).jpg",
       date: "20 May",
       role: "Admin",
       comment: "5 Comments",
@@ -19,7 +19,7 @@ const BlogMain = () => {
     },
     {
       id: 2,
-      img: "/download (6).jpg",
+      img: "/BlogSection (2).jpg",
       date: "22 May",
       role: "Guest",
       comment: "3 Comments",
@@ -29,7 +29,7 @@ const BlogMain = () => {
     },
     {
       id: 3,
-      img: "/download (6).jpg",
+      img: "/BlogSection (3).jpg",
       date: "25 May",
       role: "Visitor",
       comment: "8 Comments",
@@ -39,7 +39,7 @@ const BlogMain = () => {
     },
     {
       id: 4,
-      img: "/download (6).jpg",
+      img: "/BlogSection (4).jpg",
       date: "20 May",
       role: "Admin",
       comment: "5 Comments",
@@ -49,7 +49,7 @@ const BlogMain = () => {
     },
     {
       id: 5,
-      img: "/download (6).jpg",
+      img: "/BlogSection (5).jpg",
       date: "22 May",
       role: "Guest",
       comment: "3 Comments",
@@ -59,7 +59,7 @@ const BlogMain = () => {
     },
     {
       id: 6,
-      img: "/download (6).jpg",
+      img: "/BlogSection (6).jpg",
       date: "25 May",
       role: "Visitor",
       comment: "8 Comments",
@@ -69,7 +69,7 @@ const BlogMain = () => {
     },
     {
       id: 7,
-      img: "/download (6).jpg",
+      img: "/BlogSection (7).jpg",
       date: "20 May",
       role: "Admin",
       comment: "5 Comments",
@@ -79,7 +79,7 @@ const BlogMain = () => {
     },
     {
       id: 8,
-      img: "/download (6).jpg",
+      img: "/BlogSection (8).jpg",
       date: "22 May",
       role: "Guest",
       comment: "3 Comments",
@@ -89,7 +89,7 @@ const BlogMain = () => {
     },
     {
       id: 9,
-      img: "/download (6).jpg",
+      img: "/BlogSection (9).jpg",
       date: "25 May",
       role: "Visitor",
       comment: "8 Comments",

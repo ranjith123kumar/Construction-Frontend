@@ -7,21 +7,21 @@ const ContactEnquiry = () => {
   const team = [
     {
       id: 1,
-      img: "/download (6).jpg",
+      img: "/contact (1).jpg",
       type: "Any Questions? Call us",
       enquiry: "+91 9876543210",
       icon: <LuPhoneCall />
     },
     {
       id: 2,
-      img: "/download (6).jpg",
+      img: "/contact (2).jpg",
       type: "Any Questions? Email us",
       enquiry: "logiland@gmail.com",
       icon: <IoMailOpenOutline />
     },
     {
       id: 3,
-      img: "/download (6).jpg",
+      img: "/contact (3).jpg",
       type: "51 Somestreet Cambridge",
       enquiry: "CB4 3AA, Chennai",
       icon: <FaMapMarkedAlt />
