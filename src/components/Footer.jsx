@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="w-full relative mt-20">
       <div className="absolute -top-16 left-0  w-[90%] md:w-[80%] bg-orange-600 rounded-r-lg shadow-xl 
                       flex flex-col md:flex-row items-center justify-between gap-4 text-white p-6 z-30">
-        <img className="w-14 md:w-20" src={Mail} alt="Mail send" />
+        <img className="w-14 md:w-20 rounded-full" src={Mail} alt="Mail send" />
 
         <h1 className="font-bold text-xl md:text-3xl text-center md:text-left flex-1">
           Subscribe Our Newsletter
