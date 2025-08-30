@@ -9,7 +9,7 @@ const BlogSection = () => {
   const Card = [
     {
       id: 1,
-      img: "/download (6).jpg",
+      img: "/blog (1).jpg",
       date: "20 May",
       role: "Admin",
       comment: "5 Comments",
@@ -19,7 +19,7 @@ const BlogSection = () => {
     },
     {
       id: 2,
-      img: "/download (6).jpg",
+      img: "/blog (2).jpg",
       date: "22 May",
       role: "Guest",
       comment: "3 Comments",
@@ -29,7 +29,7 @@ const BlogSection = () => {
     },
     {
       id: 3,
-      img: "/download (6).jpg",
+      img: "/blog (3).jpg",
       date: "25 May",
       role: "Visitor",
       comment: "8 Comments",
