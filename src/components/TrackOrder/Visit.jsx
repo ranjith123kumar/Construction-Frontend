@@ -39,7 +39,7 @@ const Visit = () => {
       className="relative py-10 w-full bg-center bg-cover"
       style={{
         backgroundImage:
-          'url("/programming-background-with-person-working-with-codes-computer.jpg")',
+          'url("/wallpaper.jpg")',
       }}
     >
       {/* Overlay */}
@@ -161,3 +161,4 @@ const Visit = () => {
 };
 
 export default Visit;
+
