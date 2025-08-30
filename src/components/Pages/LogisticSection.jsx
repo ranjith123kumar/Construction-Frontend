@@ -51,9 +51,9 @@ const LogisticSection
                                         </h1>
                                         <p className='font-light text-lg text-white'>{section.text}</p>
                                         <div>
-                                            <button className="mt-3 bg-orange-600 border border-transparent hover:bg-transparent hover:border-orange-600 cursor-pointer text-white text-md hover:scale-90 font-medium px-4 py-2 rounded-lg transition duration-500">
+                                            <Link to="/trackorder" className="mt-3 bg-orange-600 border border-transparent hover:bg-transparent hover:border-orange-600 cursor-pointer text-white text-md hover:scale-90 font-medium px-4 py-2 rounded-lg transition duration-500">
                                                 Read More
-                                            </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
