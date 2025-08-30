@@ -11,7 +11,7 @@ const services = [
     icon: Truck,
     title: "Fast & Reliable Road Freight Service",
     desc: "We provide the best services for road transportation with reliability and speed.",
-    image: "https://img.freepik.com/free-photo/highway-road-surrounded-by-nature_181624-36677.jpg",
+    image: "/Oredr-wallpaper (6).jpg",
   },
   {
     id: "air",
@@ -19,7 +19,7 @@ const services = [
     icon: Plane,
     title: "Fast & Reliable Air Freight Service",
     desc: "We provide world-class air freight services ensuring safe and quick delivery.",
-    image: "https://img.freepik.com/free-photo/airplane-flying-city-skyline-sunset_1232-3194.jpg",
+    image: "/Oredr-wallpaper (5).jpg",
   },
   {
     id: "ocean",
@@ -27,7 +27,7 @@ const services = [
     icon: Ship,
     title: "Fast & Reliable Ocean Freight Service",
     desc: "Trusted sea freight services with secure shipment across the globe.",
-    image: "https://img.freepik.com/free-photo/container-ship-harbor_1112-1273.jpg",
+    image: "/Oredr-wallpaper (4).jpg",
   },
   {
     id: "train",
@@ -35,7 +35,7 @@ const services = [
     icon: TrainFront,
     title: "Fast & Reliable Train Freight Service",
     desc: "Affordable and quick railway freight options for domestic transport.",
-    image: "https://img.freepik.com/free-photo/train-station-with-freight-cars_181624-29355.jpg",
+    image: "/Oredr-wallpaper (3).jpg",
   },
   {
     id: "drone",
@@ -43,7 +43,7 @@ const services = [
     icon: Drone,
     title: "Fast & Reliable Drone Freight Service",
     desc: "Modern drone delivery service for smaller packages in no time.",
-    image: "https://img.freepik.com/free-photo/drone-flying-sky_181624-23590.jpg",
+    image: "/Oredr-wallpaper (2).jpg",
   },
   {
     id: "gift",
@@ -51,7 +51,7 @@ const services = [
     icon: Gift,
     title: "Fast & Reliable Gift Delivery Service",
     desc: "Send gifts to your loved ones with our express gift delivery system.",
-    image: "https://img.freepik.com/free-photo/gift-box-ribbon_144627-34424.jpg",
+    image: "/Oredr-wallpaper (1).jpg",
   },
 ];
 
@@ -64,51 +64,63 @@ const FreightSection = () => {
   }, []);
 
   return (
-    <div className="py-10" data-aos="fade-down-right">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8 px-6 max-w-6xl mx-auto">
-        {/* Image */}
-        <img
-          src={activeService.image}
-          alt={activeService.name}
-          className="w-full md:w-1/2 h-[300px] md:h-[400px] rounded-2xl shadow-lg object-cover"
-        />
+    <div className="relative min-w-full h-auto bg-center bg-cover py-16" 
+      style={{ backgroundImage: 'url("/wallpaper.jpg")' }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/70"></div>
 
-        {/* Text */}
-        <div className="max-w-lg">
-          <p className="text-orange-600 font-semibold text-2xl">We Provide Best Services</p>
-          <h1 className="text-3xl md:text-4xl font-bold mt-2 leading-snug">
-            {activeService.title}
-          </h1>
-          <p className="text-gray-600 mt-4">{activeService.desc}</p>
-          <Link
-            to="/service"
-            className="mt-6 flex items-center gap-2 bg-orange-600 border border-orange-600 hover:bg-white px-6 py-3 rounded-xl font-semibold text-white hover:text-orange-600 shadow-lg transition-transform duration-300 hover:scale-110 w-fit"
-          >
-            Read More <ArrowRight size={18} />
-          </Link>
-        </div>
-      </div>
+      {/* Content */}
+      <div className="relative max-w-6xl mx-auto px-6 z-10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Image */}
+          <img
+            src={activeService.image}
+            alt={activeService.name}
+            data-aos="fade-right"
+            className="w-full md:w-1/2 h-[350px] md:h-[450px] rounded-2xl shadow-lg object-cover"
+          />
 
-      {/* Services Buttons */}
-      <div className="mt-10 flex flex-wrap justify-center gap-4">
-        {services.map((service) => {
-          const Icon = service.icon;
-          return (
-            <button
-              key={service.id}
-              onClick={() => setActive(service.id)}
-              aria-pressed={active === service.id}
-              className={`flex items-center gap-2 px-5 py-3 rounded-xl shadow-md transition-transform duration-300 hover:scale-110 ${
-                active === service.id
-                  ? "bg-orange-600 text-white"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-              }`}
+          {/* Text */}
+          <div className="max-w-lg text-white" data-aos="fade-left">
+            <p className="text-orange-400 font-semibold text-2xl">
+              We Provide Best Services
+            </p>
+            <h1 className="text-3xl md:text-4xl font-bold mt-2 leading-snug">
+              {activeService.title}
+            </h1>
+            <p className="mt-4 text-gray-200">{activeService.desc}</p>
+            <Link
+              to="/service"
+              className="mt-6 flex items-center gap-2 bg-orange-600 border border-orange-600 hover:bg-white px-6 py-3 rounded-xl font-semibold text-white hover:text-orange-600 shadow-lg transition-transform duration-300 hover:scale-105 w-fit"
             >
-              <Icon size={28} />
-              <span className="font-medium">{service.name}</span>
-            </button>
-          );
-        })}
+              Read More <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+
+        {/* Services Buttons */}
+        <div className="mt-12 flex flex-wrap justify-center gap-4">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <button
+                key={service.id}
+                onClick={() => setActive(service.id)}
+                aria-label={`Select ${service.name}`}
+                aria-pressed={active === service.id}
+                className={`flex items-center gap-2 px-5 py-3 rounded-xl shadow-md transition-all duration-300 hover:scale-105 ${
+                  active === service.id
+                    ? "bg-orange-600 text-white ring-2 ring-orange-400 shadow-lg"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
+              >
+                <Icon size={24} />
+                <span className="font-medium">{service.name}</span>
+              </button>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
