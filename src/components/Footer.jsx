@@ -4,7 +4,7 @@ import { LuInstagram } from "react-icons/lu";
 import { BsTwitterX } from "react-icons/bs";
 import { IoLocationOutline, IoCallOutline } from "react-icons/io5";
 import { CgMail } from "react-icons/cg";
-import Mail from "/download (6).jpg";
+import Mail from "/mail.jpg";
 
 const Footer = () => {
   return (
