@@ -1,8 +1,7 @@
+import { useEffect } from "react";
 import { ClipboardList, Package, Box, Truck } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-AOS.init();
 
 const steps = [
   { id: "01", title: "Online Quote", desc: "Get instant cost estimation for your product or service online.", icon: ClipboardList },
@@ -12,10 +11,13 @@ const steps = [
 ];
 
 const WorkingSection = () => {
-  return (
-    <div className="py-16 bg-gray-50" data-aos="fade-down">
-      <div className="max-w-6xl mx-auto text-center px-6">
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
+  return (
+    <div className="py-16 bg-gray-50">
+      <div className="max-w-6xl mx-auto text-center px-6">
         <p className="text-orange-600 font-semibold uppercase tracking-wide">
           Working Process
         </p>
@@ -23,30 +25,35 @@ const WorkingSection = () => {
           We Follow Great Process
         </h2>
 
-
         <div className="mt-12 flex flex-col md:flex-row items-center justify-center relative gap-12 md:gap-20">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <div key={step.id} className="flex flex-col items-center relative">
-
-                <div className="w-16 h-16 flex items-center justify-center border-2 rounded-full text-orange-600 font-bold hover:bg-orange-600 hover:text-white transition">
+              <div
+                key={step.id}
+                className="flex flex-col items-center relative"
+                data-aos="fade-up"
+                data-aos-delay={index * 200} // staggered delay
+              >
+                {/* Icon */}
+                <div className="w-16 h-16 flex items-center justify-center border-2 rounded-full text-orange-600 font-bold 
+                  hover:bg-orange-600 hover:text-white transition duration-300 ease-in-out transform hover:scale-110 shadow-md">
                   <Icon size={28} />
                 </div>
 
-
+                {/* Title */}
                 <p className="mt-3 text-lg font-semibold">{step.title}</p>
 
-
+                {/* Description */}
                 <p className="mt-2 text-sm text-gray-600 max-w-[200px]">
                   {step.desc}
                 </p>
 
-
+                {/* Connector */}
                 {index !== steps.length - 1 && (
                   <>
                     <div className="hidden md:block w-24 h-0.5 bg-gray-300 absolute top-8 left-full"></div>
-                    <div className="md:hidden w-0.5 h-12 bg-gray-300 mt-4"></div>
+                    <div className="md:hidden w-0.5 h-14 bg-gray-300 mt-4"></div>
                   </>
                 )}
               </div>
@@ -56,6 +63,6 @@ const WorkingSection = () => {
       </div>
     </div>
   );
-}
+};
 
-export default WorkingSection
+export default WorkingSection;
