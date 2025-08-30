@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 
 const TransportSection = () => {
     const team = [
-        { id: 1, img: "/download (4).jpg", name: "Logistics", position: "Road Freight Solution" },
-        { id: 2, img: "/download (5).jpg", name: "Logistics", position: "Air Freight Solution" },
-        { id: 3, img: "/download (6).jpg", name: "Logistics", position: "Sea Freight Solution" },
-        { id: 4, img: "/download (4).jpg", name: "Logistics", position: "Transport Solution" },
-        { id: 5, img: "/download (5).jpg", name: "Logistics", position: "Warehouse Solution" },
-        { id: 6, img: "/download (6).jpg", name: "Logistics", position: "Cargo Handling" },
-        { id: 7, img: "/download (4).jpg", name: "Logistics", position: "Courier Delivery" },
-        { id: 8, img: "/download (5).jpg", name: "Logistics", position: "Express Transport" },
-        { id: 9, img: "/download (6).jpg", name: "Logistics", position: "Road Freight Solution" },
-        { id: 10, img: "/download (4).jpg", name: "Logistics", position: "Air Freight Solution" },
-        { id: 11, img: "/download (5).jpg", name: "Logistics", position: "Sea Freight Solution" },
-        { id: 12, img: "/download (6).jpg", name: "Logistics", position: "Transport Solution" },
+        { id: 1, img: "/transport (13).jpg", name: "Logistics", position: "Road Freight Solution" },
+        { id: 2, img: "/transport (11).jpg", name: "Logistics", position: "Air Freight Solution" },
+        { id: 3, img: "/transport (12).jpg", name: "Logistics", position: "Ship Freight Solution" },
+        { id: 4, img: "/transport (7).jpg", name: "Logistics", position: "Transport Solution" },
+        { id: 5, img: "/transport (10).jpg", name: "Logistics", position: "Warehouse Solution" },
+        { id: 6, img: "/transport (9).jpg", name: "Logistics", position: "Cargo Handling" },
+        { id: 7, img: "/transport (1).jpg", name: "Logistics", position: "Courier Delivery" },
+        { id: 8, img: "/transport (8).jpg", name: "Logistics", position: "Express Transport" },
+        { id: 9, img: "/transport (13).jpg", name: "Logistics", position: "Road Freight Solution" },
+        { id: 10, img: "/transport (11).jpg", name: "Logistics", position: "Air Freight Solution" },
+        { id: 11, img: "/transport (12).jpg", name: "Logistics", position: "Ship Freight Solution" },
+        { id: 12, img: "/transport (7).jpg", name: "Logistics", position: "Transport Solution" },
     ];
 
     const [current, setCurrent] = useState(0);
