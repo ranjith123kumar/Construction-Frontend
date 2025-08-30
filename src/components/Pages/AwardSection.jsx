@@ -33,7 +33,7 @@ const AwardSection = () => {
             <div className="p-6 relative flex justify-center md:justify-end items-end">
                 {/* Main Image */}
                 <img
-                    src="download (5).jpg"
+                    src="/transport (7).jpg"
                     alt="Main Transport"
                     className="w-full md:w-3/4 h-60 md:h-[28rem] object-cover rounded-lg shadow-lg"
                 />
@@ -47,7 +47,7 @@ const AwardSection = () => {
 
                 {/* Small Overlay Image */}
                 <img
-                    src="download (4).jpg"
+                    src="/client (1).jpg"
                     alt="Overlay Transport"
                     className="w-40 md:w-1/2 h-32 md:h-64 object-cover rounded shadow-2xl absolute bottom-0 left-1/2 md:left-10 transform -translate-x-1/2 md:-translate-x-1/4 translate-y-5"
                 />
