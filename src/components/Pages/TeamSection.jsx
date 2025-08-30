@@ -8,19 +8,19 @@ const TeamSection = () => {
     const team = [
         {
             id: 1,
-            img: "/download (6).jpg",
+            img: "public/delivery-worker-1.jpg",
             name: "Kevin",
             position: "Co Founder",
         },
         {
             id: 2,
-            img: "/download (6).jpg",
+            img: "public/delivery-worker-2.jpg",
             name: "David Cooper",
             position: "Consultant",
         },
         {
             id: 3,
-            img: "/download (6).jpg",
+            img: "public/delivery-worker-3.jpg",
             name: "Martin",
             position: "Co Founder",
         },
